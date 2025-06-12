@@ -145,7 +145,7 @@ def main():
                     col1, col2 = st.columns(2)
                     col1.metric("ความสุก", data.get("ripeness", "ไม่ระบุ"))
                     col1.metric("ความหวาน", data.get("brix", "ไม่ระบุ"))
-                    col1.metric("ความแน่นเนื้อ", data.get("ความแน่นเนื้อ", "ไม่ระบุ"))
+                    col2.metric("ความแน่นเนื้อ", data.get("ความแน่นเนื้อ", "ไม่ระบุ"))
                     col2.metric("ค่า pH", data.get("ph", "ไม่ระบุ"))
                     วันคงเหลือ = คำนวณวันคงเหลือ(data.get("อายุการเก็บรักษาก่อนเน่าเสีย"))
                     col2.metric("คงเหลือก่อนเน่าเสีย", f"{วันคงเหลือ} วัน" if วันคงเหลือ is not None else "ไม่ระบุ")

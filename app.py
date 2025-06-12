@@ -190,7 +190,10 @@ def main():
                     col2.metric("ค่า pH", data.get("ph", "ไม่ระบุ"))
                     col2.metric("อายุการเก็บรักษา", data.get("อายุการเก็บรักษา","ไม่ระบุ"))
                     เหตุผล = data.get("reason", "")
-if "ขาด" in เหตุผล or "ไม่สามารถพิจารณาได้" in data.get("ripeness", ""):
+เหตุผล = data.get("reason", "")
+ripeness = str(data.get("ripeness", ""))
+
+if "ขาด" in เหตุผล or "ไม่สามารถพิจารณาได้" in ripeness:
     st.warning("⚠️ ข้อมูลไม่ครบ: " + เหตุผล)
 else:
     st.info(เหตุผล)

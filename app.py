@@ -188,8 +188,8 @@ def main():
                     col1.metric("ความสุก", data.get("ripeness", "ไม่ระบุ"))
                     col1.metric("ค่า Brix", data.get("brix", "ไม่ระบุ"))
                     col2.metric("ค่า pH", data.get("ph", "ไม่ระบุ"))
-                    col2.metric("อายุการเก็บรักษา", data.get("อายุการเก็บรักษา","ไม่ระบุ"))
-                    เหตุผล = data.get("reason", "")
+                    col2.metric("อายุการเก็บรักษา", data.get("อายุการเก็บรักษาก่อนเน่าเสีย", "ไม่ระบุ"))
+
 เหตุผล = data.get("reason", "")
 ripeness = str(data.get("ripeness", ""))
 

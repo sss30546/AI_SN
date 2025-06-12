@@ -135,9 +135,9 @@ def main():
 
     # 🧠 แสดงผลแชตพร้อมจัดการ JSON
     for msg in st.session_state["messages"]:
-    if msg["role"] == "user":
+    if isinstance(msg, dict) and msg.get("role") == "user":
         st.markdown(f"**🧑‍🌾 คุณ:** {msg['content']}")
-    else:
+    elif isinstance(msg, dict) and msg.get("role") == "assistant":
         try:
             data = json.loads(msg["content"])
             with st.container():
@@ -159,6 +159,10 @@ def main():
                     col2.metric("สี", data.get("สีของเนื้อเมลอน", "ไม่ระบุ"))
                     st.info(data.get("reason", "ไม่พบคำอธิบาย"))
         except Exception:
-            st.markdown(f"**🤖 อองตอง:** {msg['content']}"
+            st.markdown(f"**🤖 อองตอง:** {msg.get('content', 'ข้อความผิดพลาด')}")
+  st.markdown("---")
+    st.caption("🌱 พัฒนาโดยทีม Sn.Guardian gen X เป็นส่วนหนึ่งของโครงการบ่มเพาะนวัตกรปัญญาประดิษฐ์ (AI Innovator) 🤖")
 
-    st.markdown("---")
+if __name__ == "__main__":
+    main()
+   

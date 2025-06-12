@@ -1,4 +1,4 @@
- #!/usr/bin/env python3
+                  #!/usr/bin/env python3
 
 import os
 import json
@@ -133,7 +133,6 @@ def main():
         elif submitted and not query:
             st.warning("⚠️ กรุณาพิมพ์คำถามก่อนส่ง")
 
-
     # 🧠 แสดงผลแชตพร้อมจัดการ JSON
     for msg in st.session_state["messages"]:
         if msg["role"] == "user":
@@ -156,9 +155,5 @@ def main():
             except Exception:
                 st.markdown(f"**🤖 อองตอง:** {msg['content']}")
 
-  st.markdown("---")
-    st.caption("🌱 พัฒนาโดยทีม Sn.Guardian gen X เป็นส่วนหนึ่งของโครงการบ่มเพาะนวัตกรปัญญาประดิษฐ์ (AI Innovator) 🤖")
-
-if __name__ == "__main__":
-    main()
+    st.markdown("---")
    

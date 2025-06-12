@@ -3,9 +3,9 @@
 import os
 import json
 import streamlit as st
+st.set_page_config(page_title="AI Melon Ripeness Bot", page_icon="🍈", layout="wide")
 from groq import Groq
 from dotenv import load_dotenv
- st.set_page_config(page_title="AI Melon Ripeness Bot", page_icon="🍈", layout="wide")
 # โหลด envimport datetime  # 👈 อย่าลืมแน่ใจว่า import นี้มีอยู่
 
 # ฟังก์ชันคำนวณวันคงเหลือ

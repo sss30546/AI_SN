@@ -14,7 +14,7 @@ def คงเหลือก่อนเน่าเสีย(วันที่
     วันผ่านไป = (วันนี้ - วันที่เริ่มสุก).days
     รวมวันก่อนเน่า = 13 + 7
     คงเหลือ = max(0, รวมวันก่อนเน่า - วันผ่านไป)
-    return คงเหลือironment variables จากไฟล์ .env
+
 load_dotenv(".env")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 client = Groq(api_key=GROQ_API_KEY)
